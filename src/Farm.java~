@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class Farm extends Node{
+ 
+  HashMap<String,Long> ingredientCost;
+  
+  public Farm(Integer name,String ingredientsAndCosts){
+    this.nodeName = name;
+    
+    if(ingredientsAndCosts !=null){
+      ingredientCost = new HashMap<String,Long>();
+      StringTokenizer st = new StringTokenizer(ingredientsAndCosts);
+      //build a hash map of ingredients and their corresponding costs
+      while (st.hasMoreTokens()) {
+        String ingredient = st.nextToken();
+        Long cost = Long.parseLong(st.nextToken());
+        ingredientCost.put(ingredient,cost);
+      }
+      
+    }
+    
+  }
+  
+  /**
+   * Method to get the cost of an ingredient for that farm
+   * @param ingredient the ingredient of which we require the cost
+   * @return the cost of that ingredient
+   */
+  public Long getCost(String ingredient){
+    return ingredientCost.get(ingredient); 
+    
+  }
+  
+  
+  
+  
+  
+}

@@ -1,0 +1,90 @@
+Name:Entree-1
+Type:Entree
+Cuisine:Indian
+Main:chicken lamb lamb 
+Sides:cheese peas 
+Add-Ons:beets 
+Prep:42
+Cook:13
+
+Name:Appetizer-2
+Type:Appetizer
+Cuisine:Greek
+Main:chicken scallops tofu 
+Sides:spinach beans 
+Add-Ons:cheese 
+Prep:26
+Cook:24
+
+Name:Salad-3
+Type:Salad
+Cuisine:Italian
+Main:arugula arugula 
+Sides:carrots 
+Add-Ons:cheese 
+Prep:10
+Cook:1
+
+Name:Appetizer-4
+Type:Appetizer
+Cuisine:Greek
+Main:shrimp 
+Sides:spinach beans 
+Add-Ons:eggs 
+Prep:22
+Cook:17
+
+Name:Salad-5
+Type:Salad
+Cuisine:Indian
+Main:lettuce arugula 
+Sides:cucumbers carrots 
+Add-Ons:eggs 
+Prep:17
+Cook:5
+
+Name:Appetizer-6
+Type:Appetizer
+Cuisine:Chinese
+Main:scallops beef 
+Sides:cheese cheese 
+Add-Ons:rice 
+Prep:36
+Cook:15
+
+Name:Entree-7
+Type:Entree
+Cuisine:Korean
+Main:shrimp lamb salmon 
+Sides:beans peas 
+Add-Ons:carrots 
+Prep:56
+Cook:22
+
+Name:Appetizer-8
+Type:Appetizer
+Cuisine:Korean
+Main:beef 
+Sides:beans 
+Add-Ons:rice 
+Prep:23
+Cook:15
+
+Name:Salad-9
+Type:Salad
+Cuisine:Italian
+Main:lettuce 
+Sides:cucumbers cucumbers 
+Add-Ons:cheese 
+Prep:18
+Cook:2
+
+Name:Appetizer-10
+Type:Appetizer
+Cuisine:French
+Main:scallops tofu 
+Sides:beans 
+Add-Ons:cheese 
+Prep:12
+Cook:12
+

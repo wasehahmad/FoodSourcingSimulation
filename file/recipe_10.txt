@@ -1,0 +1,90 @@
+name: Entree-1
+type: Entree
+cuisine: Indian
+main: chicken lamb lamb
+addons: beets
+sides: cheese peas
+prep: 42
+cook: 13
+
+name: Appetizer-2
+type: Appetizer
+cuisine: Greek
+main: chicken scallops tofu
+addons: cheese
+sides: spinach beans
+prep: 26
+cook: 24
+
+name: Salad-3
+type: Salad
+cuisine: Italian
+main: arugula arugula
+addons: cheese
+sides: carrots
+prep: 10
+cook: 1
+
+name: Appetizer-4
+type: Appetizer
+cuisine: Greek
+main: shrimp
+addons: eggs
+sides: spinach beans
+prep: 22
+cook: 17
+
+name: Salad-5
+type: Salad
+cuisine: Indian
+main: lettuce arugula
+addons: eggs
+sides: cucumbers carrots
+prep: 17
+cook: 5
+
+name: Appetizer-6
+type: Appetizer
+cuisine: Chinese
+main: scallops beef
+addons: rice
+sides: cheese cheese
+prep: 36
+cook: 15
+
+name: Entree-7
+type: Entree
+cuisine: Korean
+main: shrimp lamb salmon
+addons: carrots
+sides: beans peas
+prep: 56
+cook: 22
+
+name: Appetizer-8
+type: Appetizer
+cuisine: Korean
+main: beef
+addons: rice
+sides: beans
+prep: 23
+cook: 15
+
+name: Salad-9
+type: Salad
+cuisine: Italian
+main: lettuce
+addons: cheese
+sides: cucumbers cucumbers
+prep: 18
+cook: 2
+
+name: Appetizer-10
+type: Appetizer
+cuisine: French
+main: scallops tofu
+addons: cheese
+sides: beans
+prep: 12
+cook: 12
+

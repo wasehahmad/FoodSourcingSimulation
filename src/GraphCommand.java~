@@ -1,0 +1,123 @@
+import java.util.*;
+import java.io.*;
+
+public class GraphCommand{
+  UndirectedGraph<Integer,Node> mainGraph; 
+  Integer fuelCost,amountOfMeals;
+  
+  public void createGraph(String restaurants,String farms,String connections){
+    
+    mainGraph = new UndirectedGraph<Integer,Node>(-1,null);
+    //=========================================================================
+    //read from restaurants, create restaurants and add them to the graph
+    try{
+      File restaurantFile = new File(restaurants);
+      Scanner scan = new Scanner(restaurantFile);
+      //while the file hasnt ended
+      while(scan.hasNext()){
+        //if the next numebr is an integer, create a restauran and then add that restaurant as a node
+        if(scan.hasNextInt()){
+          Integer key = scan.nextInt();
+          Restaurant rest = new Restaurant(key);
+          mainGraph.addNode(key,rest);
+        }else{
+          scan.next();
+        }
+      }
+    }catch(Exception e){
+      e.printStackTrace();
+    }
+    
+    //================================================================
+    //read from the farms file and add farms to the graph as nodes
+    try{
+      File farmsFile = new File(farms);
+      Scanner scan = new Scanner(farmsFile);
+      
+      while(scan.hasNext()){
+        if(scan.hasNext("farm")){
+          scan.next();
+          Integer key = scan.nextInt();
+          //pass over the " - " 
+          scan.next();
+          //while the other farm doesnt appear, create one string of all the ingredients and costs 
+          String ingredientsAndCosts= scan.next();
+          //while the data for the next farm doesnt start, build a single string of all the data of the current farm
+          while(!scan.hasNext("farm")){
+            ingredientsAndCosts = ingredientsAndCosts + " " + scan.next();
+          }
+          Farm farm = new Farm(key,ingredientsAndCosts);
+          mainGraph.addNode(key,farm);
+        }
+        
+      }
+    }catch(Exception e){
+      e.printStackTrace(); 
+    }
+    
+    //=========================================================================================
+    //add connections to the graph
+    
+    try{
+      File connectionFile = new File(connections);
+      Scanner scan = new Scanner(connectionFile);
+      
+      while(scan.hasNext()){
+        Integer key1 = scan.nextInt();
+        //pass over the hyphen
+        scan.next();
+        Integer key2 = scan.nextInt();
+        Integer weight = scan.nextInt();
+        //if the graph doesnt contain the 1st key, create a layover node and add it to the graph
+        if(!mainGraph.contains(key1)){
+          Layover layOver = new Layover(key1);
+          mainGraph.addNode(key1,layOver);
+        }
+        //if the graph doesnt contain the 2nd key, create a layover node and add it to the graph
+        if(!mainGraph.contains(key2)){
+          Layover layOver = new Layover(key2);
+          mainGraph.addNode(key2,layOver);
+        }
+        mainGraph.addEdge(key1,key2,weight);
+        
+      }
+      
+    }catch(Exception e){
+      e.printStackTrace();
+    }
+    //=========================================================================================
+  }
+  
+  
+  //assign numbers to the travle cost and the number of meals varialble
+  public void assignVariables(String travelCost,String numberOfMeals){
+   fuelCost= Integer.parseInt(travelCost);
+   amountOfMeals = Integer.parseInt(numberOfMeals);
+    
+  }
+  
+  public void generateRoute(Meal meal){
+    //create a hash map of all the ingredients in the meal with the key as the ingredient and the value as the amount  of times it occurs
+    HashMap<String,Integer> ingredients = new HashMap<String,Integer>();
+    //for each ingredient in the meal, add them to the hash map
+    for(int i =0; i<meal.getIngredients().size(); i++){
+      String ing = meal.getIngredients().get(i);
+      //if the hash map desnt already have it, add the ingredient to the hash map and set the amount to 1
+      if(!ingredients.containsKey(ing)){
+        ingredients.put(ing,1);
+      }else{//else if the hash map already contains the ingredient, up the amount to one more
+        Integer amount =ingredients.get(ing)+1;
+       ingredients.put(ing,amount);
+        
+      }
+    }
+    
+    //generate route
+    
+    
+    
+  }
+  
+  
+  
+}

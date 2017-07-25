@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class Path{
+  
+  ArrayList<Node> vertices;
+  Integer weight;
+  
+  public Path(ArrayList<Node> vertices,Integer weight){
+  this.vertices = vertices;
+  this.weight = weight;
+  }
+  
+  public Integer weight(){
+    return weight;
+  }
+  
+  public ArrayList<Node> path(){
+    return vertices;
+  }
+  
+}
